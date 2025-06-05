@@ -1,12 +1,13 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <div className="relative">
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
               <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-full flex items-center justify-center">
@@ -18,12 +19,13 @@ const Header = () => {
             </div>
           </div>
           <span className="text-white text-2xl font-bold">D247</span>
-        </div>
+        </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-white hover:text-cyan-200 transition-colors font-medium">HOME</a>
-          <a href="#" className="text-white hover:text-cyan-200 transition-colors font-medium">ONLINE ID</a>
-          <a href="#" className="text-white hover:text-cyan-200 transition-colors font-medium">ABOUT</a>
+          <Link to="/" className="text-white hover:text-cyan-200 transition-colors font-medium">HOME</Link>
+          <Link to="/registration" className="text-white hover:text-cyan-200 transition-colors font-medium">REGISTRATION</Link>
+          <Link to="/how-to-get-id" className="text-white hover:text-cyan-200 transition-colors font-medium">GET ID</Link>
+          <Link to="/how-to-place-bet" className="text-white hover:text-cyan-200 transition-colors font-medium">PLACE BET</Link>
           <a href="#" className="text-white hover:text-cyan-200 transition-colors font-medium">CONTACT</a>
           <a href="#" className="text-white hover:text-cyan-200 transition-colors font-medium">BLOG</a>
         </nav>
